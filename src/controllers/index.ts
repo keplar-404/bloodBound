@@ -1,4 +1,4 @@
-import { home } from "./homeController.js"
+import { home } from "./homeController"
 
 
 
