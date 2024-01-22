@@ -8,7 +8,7 @@ mongoose.set('useFindAndModify', false);
 mongoose
   .connect(db_local, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true, 
     useCreateIndex: true
   })
   .then(() => {
