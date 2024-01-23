@@ -36,6 +36,6 @@ git branch
 ```bash 
 git add .
 git commit -m "your commit message here"
-git push origin your_branch_name_here
+git push origin -u your_branch_name_here
 ```
 2. After that a link will appear on your console. Click on it. It will open a pull req link. Create pull req from browser GUI.
