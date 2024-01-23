@@ -1,5 +1,5 @@
 import express from "express"
-import allControllers from "../controllers/index.js"
+import allControllers from "../controllers"
 
 const router = express.Router()
 const { home } = allControllers
