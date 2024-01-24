@@ -9,4 +9,4 @@ mongoose
   .then(() => {
     app.listen(port, () => console.log(`Express server is running on ${port} & connected to MongoDB using Mongoose`));
   })
-  .catch((err) => console.error('Error connecting to MongoDB:', err.message));
+  .catch((err:Error) => console.error('Error connecting to MongoDB:', err.message));
