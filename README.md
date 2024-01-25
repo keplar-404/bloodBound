@@ -47,8 +47,8 @@ git push origin -u your_branch_name_here
 
 #### Test api
 
-```http
-  GET https://blood-bound.vercel.app
+```
+GET https://blood-bound.vercel.app
 ```
 ### User api route
 
@@ -66,9 +66,9 @@ git push origin -u your_branch_name_here
 ### Blood donation campaign api route
 | **Opetation**  | **Api** | **Type**     | **Data (type)**                |
 | :-------- | :-------- | :------- | :------------------------- |
-| `Create` | `https://blood-bound.vercel.app/campaigncreate`|`POST`| title (string),description (string),startDate (date),endDate (date),division (string),district (string),subDistrict (string),userId (string),|
-| `Update` | `https://blood-bound.vercel.app/campaignupdate`|`PUT`| title (string),description (string),startDate (date),endDate (date),division (string),district (string),subDistrict (string),id (string),|
-| `Delete` | `https://blood-bound.vercel.app/campaigndelete`|`DELETE`| userId (string), id (string),|
+| `Create` | `https://blood-bound.vercel.app/campaigncreate`|`POST`| title (string), description (string), startDate (date), endDate (date), division (string), district (string), subDistrict (string), userId (string)|
+| `Update` | `https://blood-bound.vercel.app/campaignupdate`|`PUT`| title (string), description (string), startDate (date), endDate (date), division (string), district (string), subDistrict (string), id (string),|
+| `Delete` | `https://blood-bound.vercel.app/campaigndelete`|`DELETE`| userId (string), id (string)|
 | `Get user campaigns` | `https://blood-bound.vercel.app/campaigns`|`POST`| userId (string)|
 | `Get user specific campaigns` | `https://blood-bound.vercel.app/campaign`|`POST`| id (string), userId (string)|
 
