@@ -56,6 +56,7 @@ GET https://blood-bound.vercel.app
 | :-------- | :-------- | :------- | :------------------------- |
 | `Create` | `https://blood-bound.vercel.app/usercreate` |`POST` | username (string), email (string), phone (number) |
 | `Update` | `https://blood-bound.vercel.app/userupdate`|`PUT`|username (string), email (string), phone (number), id (string)|
+| `Blood req create` | `https://blood-bound.vercel.app/bloodrequest`|`POST`|userId (string), patientName (string), bloodGroup (string), time (date), location (string), phone (number), bloodLiter (number)|
 
 
 ### Donor api route

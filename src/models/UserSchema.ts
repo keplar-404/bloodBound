@@ -11,6 +11,7 @@ const UserSchema = new mongoose.Schema({
       time: Date,
       location: String,
       phone: Number,
+      bloodLiter: Number,
     },
   ],
   campaigns: [{ type: mongoose.Schema.Types.ObjectId, ref: "Campaign" }],

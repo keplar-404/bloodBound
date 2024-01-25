@@ -8,6 +8,7 @@ import campaignUpdate from "./campaignUpdateController";
 import getCampaigns from "./getCampaignsController";
 import createDonor from "./donorCreateController";
 import getDonors from "./getDonarsController";
+import createBloodRequest from "./bloodReqController";
 
 const allControllers = {
   // shammo controllers
@@ -18,6 +19,8 @@ const allControllers = {
   // user
   userCreate,
   userUpdate,
+  createBloodRequest,
+
 
   // campaign
   campaignCreate,
