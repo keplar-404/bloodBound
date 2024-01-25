@@ -12,6 +12,7 @@ const {
   campaignUpdate,
   getCampaigns,
   createDonor,
+  getDonors,
 } = allControllers;
 
 //all router operation
@@ -30,4 +31,6 @@ router.delete("/campaigndelete", campaignDelete);
 
 // donor
 router.post("/donorcreate", createDonor);
+router.get("/getdonars", getDonors);
+
 export default router;

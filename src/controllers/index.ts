@@ -7,13 +7,14 @@ import getCampaign from "./getCampaignController";
 import campaignUpdate from "./campaignUpdateController";
 import getCampaigns from "./getCampaignsController";
 import createDonor from "./donorCreateController";
+import getDonors from "./getDonarsController";
 
 const allControllers = {
   // shammo controllers
 
   // shehub controllers
   home,
-  
+
   // user
   userCreate,
   userUpdate,
@@ -27,6 +28,7 @@ const allControllers = {
 
   // donor
   createDonor,
+  getDonors,
 };
 
 export default allControllers;
