@@ -7,7 +7,7 @@ export default async function userCreate(
 ) {
   const { username, email, phone } = req.body;
 
-  const userName = username.toLoweCase().trim();
+  const userName = username.toLowerCase().trim();
   const userEmail = email.toLowerCase().trim();
 
   try {

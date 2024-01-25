@@ -6,9 +6,9 @@ export default async function createDonor(
   res: Response,
   next: NextFunction
 ) {
-  const { name, email, phone, lastTimeDonate, bloodGroup } = req.body;
+  const { userName, email, phone, lastTimeDonate, bloodGroup } = req.body;
 
-  const donorName = name.toLowerCase().trim();
+  const donorName = userName.toLowerCase().trim();
   const donorEmail = email.toLowerCase().trim();
   const donorPhone = phone.trim();
 
@@ -26,7 +26,7 @@ export default async function createDonor(
     }
 
     const donor = new DonorsSchema({
-      name: donorName,
+      userName: donorName,
       email: donorEmail,
       phone: donorPhone,
       isDonatable: donatable,

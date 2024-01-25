@@ -6,7 +6,7 @@ export default async function userUpdate(
   res: Response,
   next: NextFunction
 ) {
-  const { username, email, id } = req.body;
+  const { username, email, phone, id } = req.body;
 
   const userName = username.toLowerCase().trim();
   const userEmail = email.toLowerCase().trim();
@@ -27,6 +27,7 @@ export default async function userUpdate(
 
     user.username = userName;
     user.email = userEmail;
+    user.phone = phone;
     await user.save();
 
     res.status(200).json({ message: "User updated successfully!", user: user });

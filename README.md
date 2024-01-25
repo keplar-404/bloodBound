@@ -39,3 +39,36 @@ git commit -m "your commit message here"
 git push origin -u your_branch_name_here
 ```
 2. After that a link will appear on your console. Click on it. It will open a pull req link. Create pull req from browser GUI.
+
+
+
+
+## API Reference
+
+#### Test api
+
+```http
+  GET https://blood-bound.vercel.app
+```
+### User api route
+
+| **Opetation**  | **Api** | **Type**     | **Data (type)**                |
+| :-------- | :-------- | :------- | :------------------------- |
+| `Create` | `https://blood-bound.vercel.app/usercreate` |`POST` | username (string), email (string), phone (number) |
+| `Update` | `https://blood-bound.vercel.app/userupdate`|`PUT`|username (string), email (string), phone (number), id (string)|
+
+
+### Donor api route
+| **Opetation**  | **Api** | **Type**     | **Data (type)**                |
+| :-------- | :-------- | :------- | :------------------------- |
+| `Create` | `https://blood-bound.vercel.app/donorcreate`|`POST`|userName (string), email (string), phone (number), lastTimeDonate (date), bloodGroup (string)|
+
+### Blood donation campaign api route
+| **Opetation**  | **Api** | **Type**     | **Data (type)**                |
+| :-------- | :-------- | :------- | :------------------------- |
+| `Create` | `https://blood-bound.vercel.app/campaigncreate`|`POST`| title (string),description (string),startDate (date),endDate (date),division (string),district (string),subDistrict (string),userId (string),|
+| `Update` | `https://blood-bound.vercel.app/campaignupdate`|`PUT`| title (string),description (string),startDate (date),endDate (date),division (string),district (string),subDistrict (string),id (string),|
+| `Delete` | `https://blood-bound.vercel.app/campaigndelete`|`DELETE`| userId (string), id (string),|
+| `Get user campaigns` | `https://blood-bound.vercel.app/campaigns`|`POST`| userId (string)|
+| `Get user specific campaigns` | `https://blood-bound.vercel.app/campaign`|`POST`| id (string), userId (string)|
+

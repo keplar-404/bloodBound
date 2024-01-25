@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const DonorSchema = new mongoose.Schema({
-  name: String,
+  userName: String,
   email: String,
   bloodGroup: String,
   lastTimeDonate: Date,
