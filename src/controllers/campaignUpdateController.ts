@@ -6,13 +6,18 @@ export default async function updateCampaign(
   res: Response,
   next: NextFunction
 ) {
-  const { id, title, description, startDate, endDate, goal, division,
+  const {
+    id,
+    title,
+    description,
+    startDate,
+    endDate,
+    division,
     district,
-    subDistrict } =
-    req.body;
+    subDistrict,
+  } = req.body;
 
   try {
-    
     let campaign = await BloodDonationCampaignSchema.findById(id);
     const exitsingTitle = await BloodDonationCampaignSchema.findOne({
       title: title,
@@ -31,8 +36,6 @@ export default async function updateCampaign(
     campaign.division = division,
     campaign.district = district,
     campaign.subDistrict = subDistrict,
-    campaign.goal = goal;
-
     campaign = await campaign.save();
 
     res.status(200).json({

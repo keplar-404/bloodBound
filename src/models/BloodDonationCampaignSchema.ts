@@ -8,8 +8,8 @@ const BloodDonationCampaignSchema = new mongoose.Schema({
   division: String,
   district: String,
   subDistrict: String,
-  goal: Number,
   donors: [{ type: mongoose.Schema.Types.ObjectId, ref: "Donor" }],
+  userId: String 
 });
 
 export default mongoose.model("Campaign", BloodDonationCampaignSchema);

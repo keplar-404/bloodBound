@@ -1,4 +1,5 @@
 import BloodDonationCampaignSchema from "../models/BloodDonationCampaignSchema";
+import UserSchema from "../models/UserSchema";
 import { Request, Response, NextFunction } from "express";
 
 export default async function campaignCreate(
@@ -11,11 +12,10 @@ export default async function campaignCreate(
     description,
     startDate,
     endDate,
-    location,
-    goal,
     division,
     district,
     subDistrict,
+    userId,
   } = req.body;
 
   try {
@@ -27,19 +27,26 @@ export default async function campaignCreate(
       return next(new Error("Campaign title already exists"));
     }
 
+    // create campaign
     const campaign = new BloodDonationCampaignSchema({
-      title: title,
-      description: description,
-      startDate: startDate,
-      endDate: endDate,
-      location: location,
-      goal: goal,
+      title,
+      description,
+      startDate,
+      endDate,
       division,
       district,
       subDistrict,
+      userId,
     });
 
     const campaignData = await campaign.save();
+
+    // update user
+    await UserSchema.findByIdAndUpdate(
+      userId,
+      { $push: { campaigns: campaignData._id } },
+      { new: true }
+    );
 
     res.status(201).json({
       campaign: campaignData,

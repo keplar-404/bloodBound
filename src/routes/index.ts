@@ -22,12 +22,12 @@ router.post("/usercreate", userCreate);
 router.put("/userupdate", userUpdate);
 
 // campaign
-router.get("/campaigns", getCampaigns);
+router.post("/campaigns", getCampaigns);
 router.post("/campaign", getCampaign);
 router.post("/campaigncreate", campaignCreate);
 router.put("/campaignupdate", campaignUpdate);
 router.delete("/campaigndelete", campaignDelete);
 
 // donor
-router.post("/donor", createDonor);
+router.post("/donorcreate", createDonor);
 export default router;
