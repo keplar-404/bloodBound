@@ -1,20 +1,17 @@
-import express, { json } from "express"
-import { home } from './routes'
-import cors from 'cors'
+import express, { json } from "express";
+import { home } from "./routes";
+import cors from "cors";
+import database from "./db";
 
+const app = express();
+app.use(json());
+app.use(cors());
+database();
 
-const app = express()
-app.use(json())
-app.use(cors()) 
-
-app.use('/', home)
+app.use("/", home);
 
 // shammo codes here
 
-
-
 // shehub codes here
 
-
-
-export default app
+export default app;

@@ -4,9 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node --transpile-only src/index.ts",
-    "build": "webpack --progress",
-    "start": "node dist/bundle.js"
+    "dev": "nodemon --exec ts-node --transpile-only src/app.ts"
   },
   "keywords": [],
   "author": "",
