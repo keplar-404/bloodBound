@@ -6,7 +6,17 @@ export default async function createDonor(
   res: Response,
   next: NextFunction
 ) {
-  const { userName, email, phone, lastTimeDonate, bloodGroup } = req.body;
+  const {
+    userName,
+    email,
+    phone,
+    lastTimeDonate,
+    bloodGroup,
+    photo,
+    district,
+    subDistrict,
+    address,
+  } = req.body;
 
   const donorName = userName.toLowerCase().trim();
   const donorEmail = email.toLowerCase().trim();
@@ -32,6 +42,10 @@ export default async function createDonor(
       isDonatable: donatable,
       lastTimeDonate: lastTimeDonate,
       bloodGroup: bloodGroup,
+      photo,
+      district,
+      subDistrict,
+      address,
     });
 
     const donorData = await donor.save();
