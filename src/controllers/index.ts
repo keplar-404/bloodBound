@@ -9,6 +9,11 @@ import getCampaigns from "./getCampaignsController";
 import createDonor from "./donorCreateController";
 import getDonors from "./getDonarsController";
 import createBloodRequest from "./bloodReqController";
+import getAllCampaigns from "./getAllCampaignsController";
+
+import stripePayment from "./stripeController";
+import getBloodRequests from "./getBloodReqController";
+
 
 const allControllers = {
   // shammo controllers
@@ -21,6 +26,8 @@ const allControllers = {
   userUpdate,
   createBloodRequest,
 
+  getBloodRequests,
+
 
   // campaign
   campaignCreate,
@@ -29,9 +36,16 @@ const allControllers = {
   campaignUpdate,
   getCampaigns,
 
+
+  getAllCampaigns,
+
   // donor
   createDonor,
   getDonors,
+
+
+  // payment
+  stripePayment
 };
 
 export default allControllers;
