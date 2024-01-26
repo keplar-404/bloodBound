@@ -28,12 +28,12 @@ export default async function createBloodRequest(
       bloodBag,
     });
 
-    res
-      .status(201)
-      .json({
-        message: "sucessfully created blood request",
-        bloodRequest: bloodRequest,
-      });
+    const bloodReqData = await bloodRequest.save();
+
+    res.status(201).json({
+      message: "sucessfully created blood request",
+      bloodRequest: bloodReqData,
+    });
 
     //   // Find the user by userId
     //   const user = await UserSchema.findById(userId);
