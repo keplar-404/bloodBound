@@ -13,6 +13,7 @@ const {
   getCampaigns,
   createDonor,
   getDonors,
+  createBloodRequest,
 } = allControllers;
 
 //all router operation
@@ -21,6 +22,7 @@ router.get("/", home);
 // user
 router.post("/usercreate", userCreate);
 router.put("/userupdate", userUpdate);
+router.post("/bloodrequest", createBloodRequest);
 
 // campaign
 router.post("/campaigns", getCampaigns);
