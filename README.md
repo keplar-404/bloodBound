@@ -57,7 +57,7 @@ GET https://blood-bound.vercel.app
 | `Create` | `https://blood-bound.vercel.app/usercreate` |`POST` | username (string), email (string), phone (number) |
 | `Update` | `https://blood-bound.vercel.app/userupdate`|`PUT`|username (string), email (string), phone (number), id (string)|
 | `Blood req create` | `https://blood-bound.vercel.app/bloodrequest`|`POST`|PatientName (string), bloodGroup (string), time (date), location (string), phone (number), bloodBag (number)|
-| `Blood req get` | `https://blood-bound.vercel.app/bloodrequest`|`GET`||
+| `Blood req get` | `https://blood-bound.vercel.app/getbloodrequests`|`GET`||
 
 
 ### Donor api route

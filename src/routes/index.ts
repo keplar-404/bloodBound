@@ -44,6 +44,6 @@ router.post("/stripe", stripePayment);
 // donor
 router.post("/donorcreate", createDonor);
 router.get("/getdonars", getDonors);
-router.get('/getbloodrequests', getBloodRequests);
+router.get('/getbloodrequests', getBloodRequests); 
 
 export default router;
