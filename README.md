@@ -42,36 +42,4 @@ git push origin -u your_branch_name_here
 
 
 
-
-## API Reference
-
-#### Test api
-
-```
-GET https://blood-bound.vercel.app
-```
-### User api route
-
-| **Opetation**  | **Api** | **Type**     | **Data (type)**                |
-| :-------- | :-------- | :------- | :------------------------- |
-| `Create` | `https://blood-bound.vercel.app/usercreate` |`POST` | username (string), email (string), phone (number) |
-| `Update` | `https://blood-bound.vercel.app/userupdate`|`PUT`|username (string), email (string), phone (number), id (string)|
-| `Blood req create` | `https://blood-bound.vercel.app/bloodrequest`|`POST`|PatientName (string), bloodGroup (string), time (date), location (string), phone (number), bloodBag (number)|
-| `Blood req get` | `https://blood-bound.vercel.app/getbloodrequests`|`GET`||
-
-
-### Donor api route
-| **Opetation**  | **Api** | **Type**     | **Data (type)**                |
-| :-------- | :-------- | :------- | :------------------------- |
-| `Create` | `https://blood-bound.vercel.app/donorcreate`|`POST`|userName (string), email (string), phone (number), photo (string), district (string), subDistrict (string), address (string), lastTimeDonate (date), bloodGroup (string)|
-| `Get` | `https://blood-bound.vercel.app/getdonars`|`GET`||
-
-### Blood donation campaign api route
-| **Opetation**  | **Api** | **Type**     | **Data (type)**                |
-| :-------- | :-------- | :------- | :------------------------- |
-| `Create` | `https://blood-bound.vercel.app/campaigncreate`|`POST`| title (string), description (string), startDate (date), endDate (date), division (string), district (string), subDistrict (string), userId (string)|
-| `Update` | `https://blood-bound.vercel.app/campaignupdate`|`PUT`| title (string), description (string), startDate (date), endDate (date), division (string), district (string), subDistrict (string), id (string),|
-| `Delete` | `https://blood-bound.vercel.app/campaigndelete`|`DELETE`| userId (string), id (string)|
-| `Get user campaigns` | `https://blood-bound.vercel.app/campaigns`|`POST`| userId (string)|
-| `Get user specific campaigns` | `https://blood-bound.vercel.app/campaign`|`POST`| id (string), userId (string)|
-
+## Api will be updated soon please do not work right now
