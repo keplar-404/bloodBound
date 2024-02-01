@@ -5,8 +5,8 @@ const BloodReqSchema = new mongoose.Schema({
   bloodGroup: String,
   time: Date,
   location: String,
-  phone: Number,
-  bloodBag: Number,
+  phone: String,
+  bloodBag: String,
 });
 
 export default mongoose.model("BloodRequest", BloodReqSchema);

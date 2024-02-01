@@ -1,7 +1,7 @@
 import Stripe from "stripe";
 import { config } from "../config";
 import { Request, Response, NextFunction } from "express";
-import DonateAmount from "../models/DonateAmount";
+import BloodDonationCampaignSchema from "../models/BloodDonationCampaignSchema";
 
 const stripe = new Stripe(config.stripe_scret);
 
@@ -10,31 +10,41 @@ export default async function stripePayment(
   res: Response,
   next: NextFunction
 ) {
-  const { token, amount, name } = req.body;
+  const { token, amount, campaignId, email } = req.body;
 
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: amount * 100,
-    currency: "USD",
-    payment_method_data: {
-      type: "card",
-      card: {
-        token,
+  try {
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: amount * 100,
+      currency: "USD",
+      payment_method_data: {
+        type: "card",
+        card: {
+          token,
+        },
       },
-    },
-    confirmation_method: "manual",
-    confirm: true,
-    return_url: "http://test.com", // this URL is for testing purposes
-  });
+      confirmation_method: "manual",
+      confirm: true,
+      return_url: "http://test.com", // this URL is for testing purposes
+    });
 
-  const donateAmount = new DonateAmount({
-    amount: amount,
-    name: name,
-  });
+    const donate = await BloodDonationCampaignSchema.findOneAndUpdate(
+      { _id: campaignId },
+      {
+        $set: {
+          donationAmount: {
+            amount: amount,
+            email: email,
+          },
+        },
+      },
+      { new: true }
+    );
 
-  const donate = await donateAmount.save();
-  
-  res.json({
-    message: "Payment successful",
-    donate,
-  });
+    res.json({
+      message: "Payment successful",
+      donate,
+    });
+  } catch (error) {
+    next(error);
+  }
 }

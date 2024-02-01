@@ -1,20 +1,27 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
-  username: String,
-  email: String,
-  phone: Number,
-  reqBlood: [
-    {
-      patientName: String,
-      bloodGroup: String,
-      time: Date,
-      location: String,
-      phone: Number,
-      bloodLiter: Number,
-    },
-  ],
-  campaigns: [{ type: mongoose.Schema.Types.ObjectId, ref: "Campaign" }],
+  name: {
+    type: String,
+    require: true,
+  },
+  email: {
+    type: String,
+    require: true,
+  },
+  photo: {
+    type: String,
+    require: true,
+  },
+  donor: {
+    phone: String,
+    bloodGroup: String,
+    district: String,
+    upazila: String,
+    address: String,
+    lastDonationDate: Date,
+    isDonatable: Boolean,
+  },
 });
 
 export default mongoose.model("User", UserSchema);
