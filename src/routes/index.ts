@@ -11,6 +11,7 @@ const {
   stripePayment,
   getBloodRequests,
   createCampaign,
+  getAllCampaigns
 } = allControllers;
 
 //all router operation
@@ -29,7 +30,7 @@ router.get("/getbloodrequests", getBloodRequests);
 
 // campaign
 router.post("/createcampaign", createCampaign);
-router.get("/getallcampaigns", createCampaign);
+router.get("/getallcampaigns", getAllCampaigns);
 
 // payment
 router.post("/stripe", stripePayment);
