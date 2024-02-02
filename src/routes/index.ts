@@ -29,6 +29,7 @@ router.get("/getbloodrequests", getBloodRequests);
 
 // campaign
 router.post("/createcampaign", createCampaign);
+router.get("/getallcampaigns", createCampaign);
 
 // payment
 router.post("/stripe", stripePayment);

@@ -6,6 +6,7 @@ import createBloodRequest from "./createBloodReqController";
 import stripePayment from "./stripeController";
 import getBloodRequests from "./getBloodReqsController";
 import createCampaign from "./createDonationCampaign";
+import getAllCampaigns from "./getAllCampaigns";
 const allControllers = {
   home,
 
@@ -18,6 +19,7 @@ const allControllers = {
 
   // campaign
   createCampaign,
+  getAllCampaigns,
 
   // donor
   createDonor,

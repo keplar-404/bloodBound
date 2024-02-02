@@ -83,3 +83,9 @@ GET https://blood-bound.vercel.app
 | **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Stripe payment` | `https://blood-bound.vercel.app/stripe` | `POST`   | token (string), amount (number), campaignId (string), email (string) |
+
+### Blood donation campaign api route
+
+| **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
+| :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
+| `Get all campaigns` | `https://blood-bound.vercel.app/getallcampaigns` | `GET`   | |
