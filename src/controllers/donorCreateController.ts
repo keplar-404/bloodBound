@@ -1,4 +1,4 @@
-import DonorsSchema from "../models/DonorsSchema";
+import UserSchema from "../models/UserSchema";
 import { Request, Response, NextFunction } from "express";
 
 export default async function createDonor(
@@ -7,52 +7,49 @@ export default async function createDonor(
   next: NextFunction
 ) {
   const {
-    userName,
     email,
     phone,
-    lastTimeDonate,
     bloodGroup,
-    photo,
     district,
-    subDistrict,
+    upazila,
     address,
+    lastDonationDate,
   } = req.body;
 
-  const donorName = userName.toLowerCase().trim();
-  const donorEmail = email.toLowerCase().trim();
-  const donorPhone = phone.trim();
+  const currentDate = new Date();
+  let donatable = false;
+  // Check if has 3 months gap between last time donate and current time
+  if (
+    lastDonationDate &&
+    currentDate.getTime() - new Date(lastDonationDate).getTime() >=
+      1000 * 60 * 60 * 24 * 30 * 3
+  ) {
+    donatable = true;
+  }
 
   try {
-    const currentDate = new Date();
-    let donatable = false;
+    const user = await UserSchema.findOneAndUpdate(
+      { email: email },
+      {
+        $set: {
+          donor: {
+            phone,
+            bloodGroup,
+            district,
+            upazila,
+            address,
+            lastDonationDate,
+            isDonatable: donatable,
+          },
+        },
+      },
+      { new: true }
+    );
 
-    // Check if has 3 months gap between last time donate and current time
-    if (
-      lastTimeDonate &&
-      currentDate.getTime() - new Date(lastTimeDonate).getTime() >=
-        1000 * 60 * 60 * 24 * 30 * 3
-    ) {
-      donatable = true;
+    if (!user) {
+      return next(new Error("User not found"));
     }
-
-    const donor = new DonorsSchema({
-      userName: donorName,
-      email: donorEmail,
-      phone: donorPhone,
-      isDonatable: donatable,
-      lastTimeDonate: lastTimeDonate,
-      bloodGroup: bloodGroup,
-      photo,
-      district,
-      subDistrict,
-      address,
-    });
-
-    const donorData = await donor.save();
-
-    res
-      .status(201)
-      .json({ donor: donorData, message: "Donor created successfully!" });
+    res.status(201).json({ user: user, message: "Donor created successfully!" });
   } catch (error) {
     next(error);
   }
