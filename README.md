@@ -66,7 +66,7 @@ GET https://blood-bound.vercel.app
 
 ### donor api route
 
-| **Opetation**    | **Api**                                      | **Type** | **Data (type)**                                                                                                                       |
+| **Opetation**    | **Api**                                   | **Type** | **Data (type)**                                                                                                                       |
 | :--------------- | :------------------------------------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------ |
 | `Create donor`   | `https://blood-bound.vercel.app/donorcreate` | `POST`   | email (string), phone (string), bloodGroup (string), district (string), upazila (string), address (string), lastDonationDate (string) |
 | `Get all donors` | `https://blood-bound.vercel.app/getdonars`   | `GET`    |                                                                                                                                       |
@@ -89,3 +89,4 @@ GET https://blood-bound.vercel.app
 | **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Get all campaigns` | `https://blood-bound.vercel.app/getallcampaigns` | `GET`   | |
+| `create campaign` | `https://blood-bound.vercel.app/createcampaign` | `POST`   | title (string), description (string), photo (string), location (string), time (date) |

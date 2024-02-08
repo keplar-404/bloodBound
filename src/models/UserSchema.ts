@@ -22,6 +22,18 @@ const UserSchema = new mongoose.Schema({
     lastDonationDate: Date,
     isDonatable: Boolean,
   },
+  donoteAmount: [
+    {
+      amount: Number,
+      campaignId: String,
+    },
+  ],
+  bloodBagDonated: [
+    {
+      campaignId: String,
+      bloodBag: String,
+    },
+  ],
 });
 
 export default mongoose.model("User", UserSchema);
