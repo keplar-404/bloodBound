@@ -1,4 +1,3 @@
-import BloodReqSchema from "../models/BloodReqSchema";
 import { Request, Response, NextFunction } from "express";
 import UserSchema from "../models/UserSchema";
 export default async function getBloodRequests(
