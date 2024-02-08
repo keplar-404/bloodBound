@@ -11,12 +11,12 @@ export default async function stripePayment(
   next: NextFunction
 ) {
   const { token, amount, campaignId, email } = req.body;
-
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount * 100,
       currency: "USD",
       payment_method_data: {
+        // @ts-ignore
         type: "card",
         card: {
           token,
@@ -30,7 +30,7 @@ export default async function stripePayment(
     const donate = await BloodDonationCampaignSchema.findOneAndUpdate(
       { _id: campaignId },
       {
-        $set: {
+        $push: {
           donationAmount: {
             amount: amount,
             email: email,
