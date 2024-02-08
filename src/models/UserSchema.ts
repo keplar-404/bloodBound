@@ -20,7 +20,6 @@ const UserSchema = new mongoose.Schema({
     upazila: String,
     address: String,
     lastDonationDate: Date,
-    isDonatable: Boolean,
   },
   donoteAmount: [
     {
@@ -31,6 +30,17 @@ const UserSchema = new mongoose.Schema({
   bloodBagDonated: [
     {
       campaignId: String,
+      bloodBag: String,
+    },
+  ],
+
+  bloodReq: [
+    {
+      patientName: String,
+      bloodGroup: String,
+      time: Date,
+      location: String,
+      phone: String,
       bloodBag: String,
     },
   ],
