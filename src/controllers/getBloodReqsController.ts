@@ -1,6 +1,6 @@
 import BloodReqSchema from "../models/BloodReqSchema";
 import { Request, Response, NextFunction } from "express";
-
+import UserSchema from "../models/UserSchema";
 export default async function getBloodRequests(
   req: Request,
   res: Response,
@@ -8,7 +8,11 @@ export default async function getBloodRequests(
 ) {
   try {
     // Retrieve all data using find method
-    let bloodRequests = await BloodReqSchema.find();
+    const users = await UserSchema.find({ bloodReq: { $exists: true } });
+    let bloodRequests = await users.map((user) => { return user.bloodReq})[0]
+
+
+// console.log(bloodRequests)
 
     // Sort data by time
     bloodRequests.sort((a, b) => {
