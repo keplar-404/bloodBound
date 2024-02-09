@@ -40,6 +40,6 @@ router.get("/getallcampaigns", getAllCampaigns);
 router.post("/stripe", stripePayment);
 
 // bio madical
-router.post("/getservices", getBioMedicalServices);
+router.get("/getservices", getBioMedicalServices);
 
 export default router;
