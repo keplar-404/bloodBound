@@ -98,6 +98,5 @@ GET https://blood-bound.vercel.app
 | **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Get all services` | `https://blood-bound.vercel.app/getservices` | `GET`   | |
-| :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Test booking` | `https://blood-bound.vercel.app/testbooking` | `POST`   | testName (string), userName (string), userEmail (string), date (string), time (string), phone (string), address (string), status (string), price (string), imageUrl (string), |
 
