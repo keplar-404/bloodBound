@@ -13,7 +13,8 @@ const {
   createCampaign,
   getAllCampaigns,
   getBioMedicalServices,
-  getUser
+  getUser,
+  testBooking
 } = allControllers;
 
 //all router operation
@@ -41,5 +42,8 @@ router.post("/stripe", stripePayment);
 
 // bio madical
 router.get("/getservices", getBioMedicalServices);
+
+
+router.post("/testbooking", testBooking);
 
 export default router;

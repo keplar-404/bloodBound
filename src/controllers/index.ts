@@ -9,6 +9,7 @@ import createCampaign from "./createDonationCampaign";
 import getAllCampaigns from "./getAllCampaigns";
 import getBioMedicalServices from "./getBioMedicalServices";
 import getUser from "./getUserController";
+import testBooking from "./testBookingController";
 const allControllers = {
   home,
 
@@ -32,7 +33,9 @@ const allControllers = {
   stripePayment,
 
   // bio madical
-  getBioMedicalServices
+  getBioMedicalServices,
+
+  testBooking
 };
 
 export default allControllers;
