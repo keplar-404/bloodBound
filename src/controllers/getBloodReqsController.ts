@@ -11,10 +11,8 @@ export default async function getBloodRequests(
 
     let userBloodReq = await users.filter((user) => user?.bloodReq[0]);
 
-    let bloodReq = userBloodReq.map((user) => user.bloodReq);
-
     res.status(200).json({
-      bloodRequests: bloodReq,
+      bloodRequests: userBloodReq,
     });
   } catch (err) {
     next(err);
