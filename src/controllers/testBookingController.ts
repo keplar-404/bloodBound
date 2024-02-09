@@ -33,9 +33,11 @@ export default async function testBooking(
       imageUrl,
     });
 
+    const testBooking = await newTestBooking.save();
+
     res.status(201).json({
       message: "Test Booking created successfully",
-      data: newTestBooking,
+      data: testBooking,
     });
   } catch (error) {
     next(error);
