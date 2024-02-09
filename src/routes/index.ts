@@ -1,6 +1,8 @@
 import express from "express";
 import allControllers from "../controllers";
 
+import { getChatHistory, postChatMessage } from '../controllers/socketIoController';
+
 const router = express.Router();
 const {
   home,
@@ -11,7 +13,7 @@ const {
   stripePayment,
   getBloodRequests,
   createCampaign,
-  getAllCampaigns
+  getAllCampaigns,
 } = allControllers;
 
 //all router operation
@@ -34,5 +36,18 @@ router.get("/getallcampaigns", getAllCampaigns);
 
 // payment
 router.post("/stripe", stripePayment);
+
+// socket
+
+
+
+
+
+router.get('/chat-history', getChatHistory);
+router.post('/chat-message', postChatMessage);
+
+
+
+
 
 export default router;

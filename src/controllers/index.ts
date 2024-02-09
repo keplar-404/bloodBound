@@ -7,6 +7,7 @@ import stripePayment from "./stripeController";
 import getBloodRequests from "./getBloodReqsController";
 import createCampaign from "./createDonationCampaign";
 import getAllCampaigns from "./getAllCampaigns";
+
 const allControllers = {
   home,
 
@@ -27,6 +28,8 @@ const allControllers = {
 
   // payment
   stripePayment,
+
+
 };
 
 export default allControllers;
