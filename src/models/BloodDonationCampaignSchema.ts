@@ -27,6 +27,15 @@ const BloodDonationCampaignSchema = new mongoose.Schema({
       email: String,
     },
   ],
+  volunteer: [
+    {
+      name: String,
+      phone: Number,
+      email: String,
+      volunteerId: String,
+      photo: String,
+    },
+  ],
 });
 
 export default mongoose.model("Campaign", BloodDonationCampaignSchema);

@@ -8,6 +8,16 @@ export default async function userCreate(
 ) {
   const { name, email, photo } = req.body;
 
+  const isUserExist = await UserSchema.findOne({ email: email });
+
+  if (isUserExist) {
+    res.status(200).json({
+      message: "user already exist",
+      user: isUserExist,
+    });
+    return;
+  }
+
   try {
     const user = new UserSchema({
       name,

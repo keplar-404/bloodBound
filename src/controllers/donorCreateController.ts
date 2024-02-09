@@ -16,17 +16,6 @@ export default async function createDonor(
     lastDonationDate,
   } = req.body;
 
-  const currentDate = new Date();
-  let donatable = false;
-  // Check if has 3 months gap between last time donate and current time
-  if (
-    lastDonationDate &&
-    currentDate.getTime() - new Date(lastDonationDate).getTime() >=
-      1000 * 60 * 60 * 24 * 30 * 3
-  ) {
-    donatable = true;
-  }
-
   try {
     const user = await UserSchema.findOneAndUpdate(
       { email: email },
@@ -39,7 +28,6 @@ export default async function createDonor(
             upazila,
             address,
             lastDonationDate,
-            isDonatable: donatable,
           },
         },
       },

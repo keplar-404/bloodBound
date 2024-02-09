@@ -63,10 +63,11 @@ GET https://blood-bound.vercel.app
 | **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Create user` | `https://blood-bound.vercel.app/usercreate` | `POST`   | name (string), email (string), photo (string) |
+| `Get user` | `https://blood-bound.vercel.app/getuser` | `POST`   | email (string) |
 
 ### donor api route
 
-| **Opetation**    | **Api**                                      | **Type** | **Data (type)**                                                                                                                       |
+| **Opetation**    | **Api**                                   | **Type** | **Data (type)**                                                                                                                       |
 | :--------------- | :------------------------------------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------ |
 | `Create donor`   | `https://blood-bound.vercel.app/donorcreate` | `POST`   | email (string), phone (string), bloodGroup (string), district (string), upazila (string), address (string), lastDonationDate (string) |
 | `Get all donors` | `https://blood-bound.vercel.app/getdonars`   | `GET`    |                                                                                                                                       |
@@ -89,3 +90,13 @@ GET https://blood-bound.vercel.app
 | **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Get all campaigns` | `https://blood-bound.vercel.app/getallcampaigns` | `GET`   | |
+| `create campaign` | `https://blood-bound.vercel.app/createcampaign` | `POST`   | title (string), description (string), photo (string), location (string), time (date) |
+
+
+### Bio medical services api route
+
+| **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
+| :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
+| `Get all services` | `https://blood-bound.vercel.app/getservices` | `GET`   | |
+| `Test booking` | `https://blood-bound.vercel.app/testbooking` | `POST`   | testName (string), userName (string), userEmail (string), date (string), time (string), phone (string), address (string), status (string), price (string), imageUrl (string), |
+

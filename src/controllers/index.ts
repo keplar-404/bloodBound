@@ -8,11 +8,15 @@ import getBloodRequests from "./getBloodReqsController";
 import createCampaign from "./createDonationCampaign";
 import getAllCampaigns from "./getAllCampaigns";
 
+import getBioMedicalServices from "./getBioMedicalServices";
+import getUser from "./getUserController";
+import testBooking from "./testBookingController";
 const allControllers = {
   home,
 
   // user
   userCreate,
+  getUser,
 
   // blood request
   createBloodRequest,
@@ -30,6 +34,10 @@ const allControllers = {
   stripePayment,
 
 
+  // bio madical
+  getBioMedicalServices,
+
+  testBooking
 };
 
 export default allControllers;
