@@ -6,3 +6,5 @@ const services = new mongoose.Schema({
   testPrice: String,
   imageUrl: String,
 });
+
+export default mongoose.model("Services", services);
