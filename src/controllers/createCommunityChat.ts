@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import communityChat from "../models/communityChat";
 
+
 export default async function createCommunityChat(
   req: Request,
   res: Response,
