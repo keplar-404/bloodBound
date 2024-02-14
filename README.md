@@ -24,7 +24,7 @@ npm i
 
 3. Change the branch
 
-```bash
+```bashs
 git checkout branch_name_here
 ```
 
