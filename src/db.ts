@@ -12,7 +12,7 @@ export default function database () {
         console.log(
           `Express server is running on ${port} & connected to MongoDB using Mongoose`
         )
-      );
+      )
     })
     .catch((err: Error) =>
       console.error("Error connecting to MongoDB:", err.message)
