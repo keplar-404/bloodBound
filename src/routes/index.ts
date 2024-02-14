@@ -1,7 +1,5 @@
 import express from "express";
 import allControllers from "../controllers";
-import createCommunityChat from "../controllers/createCommunityChat";
-import getCommunityChat from "../controllers/getCommunityChat";
 
 const router = express.Router();
 const {
@@ -47,9 +45,5 @@ router.get("/getservices", getBioMedicalServices);
 
 
 router.post("/testbooking", testBooking);
-
-//communityChat
-router.post("/createCommunityChat", createCommunityChat)
-router.get("/getCommunityChat", getCommunityChat)
 
 export default router;
