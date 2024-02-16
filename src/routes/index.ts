@@ -1,10 +1,12 @@
 import express from "express";
 import allControllers from "../controllers";
 
+
 const router = express.Router();
 const {
   home,
   userCreate,
+  getUser,
   createDonor,
   getDonors,
   createBloodRequest,
@@ -19,6 +21,7 @@ router.get("/", home);
 
 // user
 router.post("/usercreate", userCreate);
+router.get("/getuser", getUser);
 
 // donor
 router.post("/donorcreate", createDonor);
