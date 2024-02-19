@@ -25,7 +25,7 @@ router.get("/", home);
 
 // user
 router.post("/usercreate", userCreate);
-router.get("/getuser", getUser);
+router.post("/getuser", getUser);
 
 // donor
 router.post("/donorcreate", createDonor);
