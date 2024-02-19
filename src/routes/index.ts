@@ -1,5 +1,7 @@
 import express from "express";
 import allControllers from "../controllers";
+import getCommunityChat from "../controllers/getCommunityChat";
+import createCommunityChat from "../controllers/createCommunityChat";
 
 
 const router = express.Router();
@@ -37,5 +39,8 @@ router.get("/getallcampaigns", getAllCampaigns);
 
 // payment
 router.post("/stripe", stripePayment);
+
+router.post("/createCommunityChat", createCommunityChat)
+router.get("/getCommunityChat", getCommunityChat)
 
 export default router;
