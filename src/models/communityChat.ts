@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const communityChat = new mongoose.Schema({
   chats:[
     {
-        date: Date,
+        time : Date,
         user: String,
         message: String,
     },
