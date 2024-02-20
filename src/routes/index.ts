@@ -15,7 +15,9 @@ const {
   stripePayment,
   getBloodRequests,
   createCampaign,
-  getAllCampaigns
+  getAllCampaigns,
+  getBioMedicalServices,
+  testBooking
 } = allControllers;
 
 //all router operation
@@ -42,5 +44,10 @@ router.post("/stripe", stripePayment);
 
 router.post("/createCommunityChat", createCommunityChat)
 router.get("/getCommunityChat", getCommunityChat)
+
+
+// bio medical
+router.get("/getservices", getBioMedicalServices);
+router.post("/testbooking", testBooking);
 
 export default router;
