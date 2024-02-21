@@ -7,15 +7,7 @@ export default async function createCampaign(
   res: Response,
   next: NextFunction
 ) {
-  const {
-    title,
-    description,
-    photo,
-    startDate,
-    endDate,
-    address,
-    email,
-  } = req.body;
+  const { title, description, photo, startDate, endDate, address } = req.body;
   try {
     // create new campaing
     const campaign = new BloodDonationCampaignSchema({
@@ -24,15 +16,8 @@ export default async function createCampaign(
       photo,
       startDate,
       endDate,
-      address
+      address,
     });
-
-    // update user 
-    await UserSchema.findByIdAndUpdate(
-      { email: email },
-      { $push: { campagins: campaign._id } },
-      { new: true }
-    );
 
     // save campaign
     const campagindata = await campaign.save();
