@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const communityChat = new mongoose.Schema({ 
-    time: {
+    message: {
         type: String,
         require: true,
       },
