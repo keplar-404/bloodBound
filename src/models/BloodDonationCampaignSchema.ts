@@ -13,12 +13,24 @@ const BloodDonationCampaignSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  location: {
+  startDate: {
+    type: Date,
+    require: true,
+  },
+  endDate: {
+    type: Date,
+    require: true,
+  },
+  division: {
     type: String,
     require: true,
   },
-  time: {
-    type: Date,
+  district: {
+    type: String,
+    require: true,
+  },
+  locaion: {
+    type: String,
     require: true,
   },
   donationAmount: [
@@ -32,7 +44,6 @@ const BloodDonationCampaignSchema = new mongoose.Schema({
       name: String,
       phone: Number,
       email: String,
-      volunteerId: String,
       photo: String,
     },
   ],

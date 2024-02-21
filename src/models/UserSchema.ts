@@ -44,6 +44,11 @@ const UserSchema = new mongoose.Schema({
       bloodBag: String,
     },
   ],
+  campagin: [
+    {
+      campaignId: String,
+    },
+  ],
 });
 
 export default mongoose.model("User", UserSchema);
