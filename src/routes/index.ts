@@ -3,7 +3,6 @@ import allControllers from "../controllers";
 import getCommunityChat from "../controllers/getCommunityChat";
 import createCommunityChat from "../controllers/createCommunityChat";
 
-
 const router = express.Router();
 const {
   home,
@@ -21,7 +20,8 @@ const {
   getSpecificCampaignAndOthers,
   calculateDonateAmountAndUser,
   volunteerCreate,
-  getUsers
+  getUsers,
+  campaignDelete,
 } = allControllers;
 
 //all router operation
@@ -46,13 +46,13 @@ router.get("/getallcampaigns", getAllCampaigns);
 router.post("/getspecificcampaignandothers", getSpecificCampaignAndOthers);
 router.post("/calculatedonateamountanduser", calculateDonateAmountAndUser);
 router.post("/volunteercreate", volunteerCreate);
+router.delete("/campaigndelete", campaignDelete);
 
 // payment
 router.post("/stripe", stripePayment);
 
-router.post("/createCommunityChat", createCommunityChat)
-router.get("/getCommunityChat", getCommunityChat)
-
+router.post("/createCommunityChat", createCommunityChat);
+router.get("/getCommunityChat", getCommunityChat);
 
 // bio medical
 router.get("/getservices", getBioMedicalServices);

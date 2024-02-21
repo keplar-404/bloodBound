@@ -10,6 +10,7 @@ import getAllCampaigns from "./getAllCampaigns";
 import getSpecificCampaignAndOthers from "./getSpecificCampaignAndOthersController";
 import calculateDonateAmountAndUser from "./calculateDonateAmountAndUserForSpecificCampaignController";
 import volunteerCreate from "./volunteerCreateController";
+import campaignDelete from "./deleteCampaign";
 
 import getBioMedicalServices from "./getBioMedicalServices";
 import getUser from "./getUserController";
@@ -33,6 +34,7 @@ const allControllers = {
   getSpecificCampaignAndOthers,
   calculateDonateAmountAndUser,
   volunteerCreate,
+  campaignDelete,
 
   // donor
   createDonor,
