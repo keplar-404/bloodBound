@@ -9,9 +9,7 @@ export default async function getCommunityChat(
     // Retrieve all data using find method
     const chat = await communityChat.find();
 
-    const data = chat.chat;
-    console.log(chat);
-
+    
     res.status(200).json({
      chat,
     });
