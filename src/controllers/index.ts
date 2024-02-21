@@ -9,16 +9,19 @@ import createCampaign from "./createDonationCampaign";
 import getAllCampaigns from "./getAllCampaigns";
 import getSpecificCampaignAndOthers from "./getSpecificCampaignAndOthersController";
 import calculateDonateAmountAndUser from "./calculateDonateAmountAndUserForSpecificCampaignController";
+import volunteerCreate from "./volunteerCreateController";
 
 import getBioMedicalServices from "./getBioMedicalServices";
 import getUser from "./getUserController";
 import testBooking from "./testBookingController";
+import getUsers from "./getAllUserController";
 const allControllers = {
   home,
 
   // user
   userCreate,
   getUser,
+  getUsers,
 
   // blood request
   createBloodRequest,
@@ -29,6 +32,7 @@ const allControllers = {
   getAllCampaigns,
   getSpecificCampaignAndOthers,
   calculateDonateAmountAndUser,
+  volunteerCreate,
 
   // donor
   createDonor,

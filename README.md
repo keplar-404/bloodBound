@@ -63,7 +63,8 @@ GET https://blood-bound.vercel.app
 | **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Create user` | `https://blood-bound.vercel.app/usercreate` | `POST`   | name (string), email (string), photo (string) |
-| `Get user` | `https://blood-bound.vercel.app/getuser` | `POST`   | email (string) |
+| `Get user` | `https://blood-bound.vercel.app/getuser` | `POST` | email (string) |
+| `Get user` | `https://blood-bound.vercel.app/getusers` | `GET` | |
 
 ### donor api route
 
@@ -93,6 +94,7 @@ GET https://blood-bound.vercel.app
 | `Get specific campaign and others` | `https://blood-bound.vercel.app/getspecificcampaignandothers` | `POST` | campaginId (string) |
 | `create campaign` | `https://blood-bound.vercel.app/createcampaign` | `POST`   | title (string), description (string), photo (string), startDate (date), endDate (date), division (string), district (string), subDistrict (string), email(string) |
 | `Get specific campain donation amount and how many users donated` | `https://blood-bound.vercel.app/calculatedonateamountanduser` | `POST`   | campaginId (string) |
+| `Volunteer create` | `https://blood-bound.vercel.app/volunteercreate` | `POST`   | campaingId (address), name (address), email (address), phone (address), address (address) |
 
 
 ### Bio medical services api route
