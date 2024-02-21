@@ -29,7 +29,7 @@ const BloodDonationCampaignSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  locaion: {
+  subDistrict: {
     type: String,
     require: true,
   },
@@ -49,4 +49,4 @@ const BloodDonationCampaignSchema = new mongoose.Schema({
   ],
 });
 
-export default mongoose.model("Campaign", BloodDonationCampaignSchema);
+export default mongoose.model("campaigns", BloodDonationCampaignSchema);

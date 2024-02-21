@@ -1,4 +1,5 @@
 import BloodDonationCampaignSchema from "../models/BloodDonationCampaignSchema";
+import UserSchema from "../models/UserSchema";
 import { Request, Response, NextFunction } from "express";
 
 export default async function createCampaign(
@@ -6,20 +7,43 @@ export default async function createCampaign(
   res: Response,
   next: NextFunction
 ) {
-  const { title, description, photo, location, time } = req.body;
-
+  const {
+    title,
+    description,
+    photo,
+    startDate,
+    endDate,
+    division,
+    district,
+    subDistrict,
+    email,
+  } = req.body;
   try {
+    // create new campaing
     const campaign = new BloodDonationCampaignSchema({
       title,
       description,
       photo,
-      location,
-      time,
+      startDate,
+      endDate,
+      division,
+      district,
+      subDistrict,
     });
-    await campaign.save();
+
+    // update user 
+    await UserSchema.findByIdAndUpdate(
+      { email: email },
+      { $push: { campagins: campaign._id } },
+      { new: true }
+    );
+
+    // save campaign
+    const campagindata = await campaign.save();
+
     res.status(201).json({
-      message: "Campaign created successfully",
-      campaign,
+      message: "sucessfully created campaign",
+      campaign: campagindata,
     });
   } catch (error) {
     next(error);

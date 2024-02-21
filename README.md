@@ -90,7 +90,9 @@ GET https://blood-bound.vercel.app
 | **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Get all campaigns` | `https://blood-bound.vercel.app/getallcampaigns` | `GET`   | |
-| `create campaign` | `https://blood-bound.vercel.app/createcampaign` | `POST`   | title (string), description (string), photo (string), location (string), time (date) |
+| `Get specific campaign and others` | `https://blood-bound.vercel.app/getspecificcampaignandothers` | `POST` | campaginId (string) |
+| `create campaign` | `https://blood-bound.vercel.app/createcampaign` | `POST`   | title (string), description (string), photo (string), startDate (date), endDate (date), division (string), district (string), subDistrict (string), email(string) |
+| `Get specific campain donation amount and how many users donated` | `https://blood-bound.vercel.app/calculatedonateamountanduser` | `POST`   | campaginId (string) |
 
 
 ### Bio medical services api route
