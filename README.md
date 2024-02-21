@@ -95,7 +95,7 @@ GET https://blood-bound.vercel.app
 | `create campaign` | `https://blood-bound.vercel.app/createcampaign` | `POST`   | title (string), description (string), photo (string), startDate (date), endDate (date), address (string), email(string) |
 | `Get specific campain donation amount and how many users donated` | `https://blood-bound.vercel.app/calculatedonateamountanduser` | `POST`   | campaginId (string) |
 | `Volunteer create` | `https://blood-bound.vercel.app/volunteercreate` | `POST`   | campaingId (address), name (address), email (address), phone (address), address (address) |
-| `Delete campaign` | `https://blood-bound.vercel.app/campaigndelete` | `DELETE`   | campaingId (string) |
+| `Delete campaign` | `https://blood-bound.vercel.app/campaigndelete/${id}` | `DELETE` | |
 
 
 ### Bio medical services api route
