@@ -21,15 +21,7 @@ const BloodDonationCampaignSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  division: {
-    type: String,
-    require: true,
-  },
-  district: {
-    type: String,
-    require: true,
-  },
-  subDistrict: {
+  address: {
     type: String,
     require: true,
   },

@@ -13,9 +13,7 @@ export default async function createCampaign(
     photo,
     startDate,
     endDate,
-    division,
-    district,
-    subDistrict,
+    address,
     email,
   } = req.body;
   try {
@@ -26,9 +24,7 @@ export default async function createCampaign(
       photo,
       startDate,
       endDate,
-      division,
-      district,
-      subDistrict,
+      address
     });
 
     // update user 
