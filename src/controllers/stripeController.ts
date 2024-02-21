@@ -2,6 +2,7 @@ import Stripe from "stripe";
 import { config } from "../config";
 import { Request, Response, NextFunction } from "express";
 import BloodDonationCampaignSchema from "../models/BloodDonationCampaignSchema";
+import UserSchema from "../models/UserSchema";
 
 const stripe = new Stripe(config.stripe_scret);
 
@@ -40,9 +41,16 @@ export default async function stripePayment(
       { new: true }
     );
 
+    const user = await UserSchema.findOneAndUpdate(
+      { email: email },
+      { $push: { donoteAmount: { amount: amount, campaignId: campaignId } } },
+      { new: true }
+    );
+
     res.json({
       message: "Payment successful",
-      donate,
+      donate: donate,
+      user: user,
     });
   } catch (error) {
     next(error);

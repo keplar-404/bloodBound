@@ -7,6 +7,8 @@ import stripePayment from "./stripeController";
 import getBloodRequests from "./getBloodReqsController";
 import createCampaign from "./createDonationCampaign";
 import getAllCampaigns from "./getAllCampaigns";
+import getSpecificCampaignAndOthers from "./getSpecificCampaignAndOthersController";
+import calculateDonateAmountAndUser from "./calculateDonateAmountAndUserForSpecificCampaignController";
 
 import getBioMedicalServices from "./getBioMedicalServices";
 import getUser from "./getUserController";
@@ -25,6 +27,8 @@ const allControllers = {
   // campaign
   createCampaign,
   getAllCampaigns,
+  getSpecificCampaignAndOthers,
+  calculateDonateAmountAndUser,
 
   // donor
   createDonor,
