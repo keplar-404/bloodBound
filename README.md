@@ -64,6 +64,7 @@ GET https://blood-bound.vercel.app
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Create user` | `https://blood-bound.vercel.app/usercreate` | `POST`   | name (string), email (string), photo (string) |
 | `Get user` | `https://blood-bound.vercel.app/getuser` | `POST` | email (string) |
+| `Get user` | `https://blood-bound.vercel.app/getusers` | `GET` | |
 
 ### donor api route
 

@@ -20,7 +20,8 @@ const {
   testBooking,
   getSpecificCampaignAndOthers,
   calculateDonateAmountAndUser,
-  volunteerCreate
+  volunteerCreate,
+  getUsers
 } = allControllers;
 
 //all router operation
@@ -29,6 +30,7 @@ router.get("/", home);
 // user
 router.post("/usercreate", userCreate);
 router.post("/getuser", getUser);
+router.get("/getusers", getUsers);
 
 // donor
 router.post("/donorcreate", createDonor);
