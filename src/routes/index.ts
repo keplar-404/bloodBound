@@ -19,7 +19,8 @@ const {
   getBioMedicalServices,
   testBooking,
   getSpecificCampaignAndOthers,
-  calculateDonateAmountAndUser
+  calculateDonateAmountAndUser,
+  volunteerCreate
 } = allControllers;
 
 //all router operation
@@ -42,6 +43,7 @@ router.post("/createcampaign", createCampaign);
 router.get("/getallcampaigns", getAllCampaigns);
 router.post("/getspecificcampaignandothers", getSpecificCampaignAndOthers);
 router.post("/calculatedonateamountanduser", calculateDonateAmountAndUser);
+router.post("/volunteercreate", volunteerCreate);
 
 // payment
 router.post("/stripe", stripePayment);

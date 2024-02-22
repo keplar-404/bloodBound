@@ -45,6 +45,13 @@ const UserSchema = new mongoose.Schema({
     },
   ],
   campagins: [String],
+  volunteer: [
+    {
+      campaingId: String,
+      phone: String,
+      address: String,
+    },
+  ],
 });
 
 export default mongoose.model("User", UserSchema);
