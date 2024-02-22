@@ -11,6 +11,10 @@ import getSpecificCampaignAndOthers from "./getSpecificCampaignAndOthersControll
 import calculateDonateAmountAndUser from "./calculateDonateAmountAndUserForSpecificCampaignController";
 import volunteerCreate from "./volunteerCreateController";
 import campaignDelete from "./deleteCampaign";
+import userDelete from "./userDeleteController";
+import blogPostCreate from "./createBlogPostController";
+import getAllBlogPosts from "./getAllBlogPostController";
+import getBlogPost from "./getSpecificBlogPost";
 
 import getBioMedicalServices from "./getBioMedicalServices";
 import getUser from "./getUserController";
@@ -23,6 +27,7 @@ const allControllers = {
   userCreate,
   getUser,
   getUsers,
+  userDelete,
 
   // blood request
   createBloodRequest,
@@ -46,8 +51,12 @@ const allControllers = {
 
   // bio madical
   getBioMedicalServices,
+  testBooking,
 
-  testBooking
+  // blog post
+  blogPostCreate,
+  getAllBlogPosts,
+  getBlogPost
 };
 
 export default allControllers;

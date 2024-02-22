@@ -52,6 +52,10 @@ const UserSchema = new mongoose.Schema({
       address: String,
     },
   ],
+  roll: {
+    type: String,
+    default: "user",
+  },
 });
 
 export default mongoose.model("User", UserSchema);
