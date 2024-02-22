@@ -46,7 +46,7 @@ router.get("/getallcampaigns", getAllCampaigns);
 router.post("/getspecificcampaignandothers", getSpecificCampaignAndOthers);
 router.post("/calculatedonateamountanduser", calculateDonateAmountAndUser);
 router.post("/volunteercreate", volunteerCreate);
-router.delete("/campaigndelete", campaignDelete);
+router.delete("/campaigndelete/:id", campaignDelete);
 
 // payment
 router.post("/stripe", stripePayment);

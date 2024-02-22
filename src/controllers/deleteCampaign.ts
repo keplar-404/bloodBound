@@ -6,9 +6,9 @@ export default async function campaignDelete(
   res: Response,
   next: NextFunction
 ) {
-  const { campaingId } = req.body;
+  const id = req.params.id;
   try {
-    await BloodDonationCampaignSchema.findByIdAndDelete(campaingId);
+    await BloodDonationCampaignSchema.findByIdAndDelete(id);
     res.status(200).json({ message: "campaign deleted successfully" });
   } catch (error) {
     next(error);
