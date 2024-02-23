@@ -64,7 +64,8 @@ GET https://blood-bound.vercel.app
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Create user` | `https://blood-bound.vercel.app/usercreate` | `POST`   | name (string), email (string), photo (string) |
 | `Get user` | `https://blood-bound.vercel.app/getuser` | `POST` | email (string) |
-| `Get user` | `https://blood-bound.vercel.app/getusers` | `GET` | |
+| `Get users` | `https://blood-bound.vercel.app/getusers` | `GET` | |
+| `Delete user` | `https://blood-bound.vercel.app/userdelete/${id}` | `DELETE` | |
 
 ### donor api route
 
@@ -105,3 +106,10 @@ GET https://blood-bound.vercel.app
 | `Get all services` | `https://blood-bound.vercel.app/getservices` | `GET`   | |
 | `Test booking` | `https://blood-bound.vercel.app/testbooking` | `POST`   | testName (string), userName (string), userEmail (string), date (string), time (string), phone (string), address (string), status (string), price (string), imageUrl (string), |
 
+### Blog post api route
+
+| **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
+| :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
+| `Create blog post` | `https://blood-bound.vercel.app/createblogpost` | `POST`   | title (string), description (string), photo (string) |
+| `Get all blog posts` | `https://blood-bound.vercel.app/getblogposts` | `GET`   | |
+| `Get specific blog post` | `https://blood-bound.vercel.app/getblogpost/${id}` | `GET`   | |

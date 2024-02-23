@@ -22,6 +22,10 @@ const {
   volunteerCreate,
   getUsers,
   campaignDelete,
+  userDelete,
+  blogPostCreate,
+  getAllBlogPosts,
+  getBlogPost,
 } = allControllers;
 
 //all router operation
@@ -31,6 +35,7 @@ router.get("/", home);
 router.post("/usercreate", userCreate);
 router.post("/getuser", getUser);
 router.get("/getusers", getUsers);
+router.delete("/userdelete/:id", userDelete);
 
 // donor
 router.post("/donorcreate", createDonor);
@@ -57,5 +62,10 @@ router.get("/getCommunityChat", getCommunityChat);
 // bio medical
 router.get("/getservices", getBioMedicalServices);
 router.post("/testbooking", testBooking);
+
+// blog post
+router.post("/createblogpost", blogPostCreate);
+router.get("/getblogposts", getAllBlogPosts);
+router.get("/getblogpost/:id", getBlogPost);
 
 export default router;
