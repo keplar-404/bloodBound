@@ -47,6 +47,7 @@ export default async function volunteerCreate(
       },
       { new: true }
     );
+    res.status(200).json({ message: "Volunteer added successfully" });
   } catch (error) {
     next(error);
   }
