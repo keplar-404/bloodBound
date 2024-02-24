@@ -96,6 +96,7 @@ GET https://blood-bound.vercel.app
 | `create campaign` | `https://blood-bound.vercel.app/createcampaign` | `POST`   | title (string), description (string), photo (string), startDate (date), endDate (date), address (string), email(string) |
 | `Get specific campain donation amount and how many users donated` | `https://blood-bound.vercel.app/calculatedonateamountanduser` | `POST`   | campaginId (string) |
 | `Volunteer create` | `https://blood-bound.vercel.app/volunteercreate` | `POST`   | campaingId (address), name (address), email (address), phone (address), address (address) |
+| `Volunteer delete` | `https://blood-bound.vercel.app/volunteerdelete` | `DELETE`   | campaignId (string), email(string)(This email should be the volunteer email) |
 | `Delete campaign` | `https://blood-bound.vercel.app/campaigndelete/${id}` | `DELETE` | |
 
 
@@ -106,6 +107,7 @@ GET https://blood-bound.vercel.app
 | `Get all services` | `https://blood-bound.vercel.app/getservices` | `GET`   | |
 | `Test booking` | `https://blood-bound.vercel.app/testbooking` | `POST`   | testName (string), userName (string), userEmail (string), date (string), time (string), phone (string), address (string), status (string), price (string), imageUrl (string), |
 | `Get all test bookings` | `https://blood-bound.vercel.app/gettestbookings` | `GET`   | |
+| `Get test booking of specific user` | `https://blood-bound.vercel.app/gettestbookingsofspecificuser/${email}` | `GET`   | |
 | `Change status of a test booking` | `https://blood-bound.vercel.app/statuschangefortestbooking/${id}` | `PATCH`   | id (string) |
 
 ### Blog post api route
