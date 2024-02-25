@@ -110,6 +110,7 @@ GET https://blood-bound.vercel.app
 | `Test booking` | `https://blood-bound.vercel.app/testbooking` | `POST`   | testName (string), userName (string), userEmail (string), date (string), time (string), phone (string), address (string), status (string), price (string), imageUrl (string), |
 | `Get all test bookings` | `https://blood-bound.vercel.app/gettestbookings` | `GET`   | |
 | `Get test booking of specific user` | `https://blood-bound.vercel.app/gettestbookingsofspecificuser/${email}` | `GET`   | |
+| `Delete test booking` | `https://blood-bound.vercel.app/deletetestbooking/${id}` | `DELETE`   | |
 | `Change status of a test booking` | `https://blood-bound.vercel.app/statuschangefortestbooking/${id}` | `PATCH`   | id (string) |
 
 ### Blog post api route
