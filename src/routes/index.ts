@@ -32,7 +32,8 @@ const {
   volunteerDelete,
   getTestBookingOfSpecificUser,
   getBloodReqsOfUser,
-  clcDonationAmountAndCampaingsLength
+  clcDonationAmountAndCampaingsLength,
+  testBookingDelete
 } = allControllers;
 
 //all router operation
@@ -73,6 +74,7 @@ router.get("/getCommunityChat", getCommunityChat);
 router.get("/getservices", getBioMedicalServices);
 router.post("/testbooking", testBooking);
 router.get("/gettestbookingsofspecificuser/:email", getTestBookingOfSpecificUser);
+router.delete("/deletetestbooking/:id", testBookingDelete);
 router.get("/gettestbookings", getTestBookings);
 router.patch("/statuschangefortestbooking/:id", statusChangeForTestBooking);
 
