@@ -26,6 +26,9 @@ const {
   blogPostCreate,
   getAllBlogPosts,
   getBlogPost,
+  getTestBookings,
+  statusChangeForTestBooking,
+  deleteBlogPost
 } = allControllers;
 
 //all router operation
@@ -62,10 +65,13 @@ router.get("/getCommunityChat", getCommunityChat);
 // bio medical
 router.get("/getservices", getBioMedicalServices);
 router.post("/testbooking", testBooking);
+router.get("/gettestbookings", getTestBookings);
+router.patch("/statuschangefortestbooking/:id", statusChangeForTestBooking);
 
 // blog post
 router.post("/createblogpost", blogPostCreate);
 router.get("/getblogposts", getAllBlogPosts);
 router.get("/getblogpost/:id", getBlogPost);
+router.delete("/deleteblogpost/:id", deleteBlogPost);
 
 export default router;

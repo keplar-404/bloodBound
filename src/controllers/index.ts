@@ -15,6 +15,9 @@ import userDelete from "./userDeleteController";
 import blogPostCreate from "./createBlogPostController";
 import getAllBlogPosts from "./getAllBlogPostController";
 import getBlogPost from "./getSpecificBlogPost";
+import getTestBookings from "./getTestBookingsController";
+import statusChangeForTestBooking from "./statusChangeForTestBooking";
+import deleteBlogPost from "./deleteBlogPostController";
 
 import getBioMedicalServices from "./getBioMedicalServices";
 import getUser from "./getUserController";
@@ -52,11 +55,14 @@ const allControllers = {
   // bio madical
   getBioMedicalServices,
   testBooking,
+  getTestBookings,
+  statusChangeForTestBooking,
 
   // blog post
   blogPostCreate,
   getAllBlogPosts,
-  getBlogPost
+  getBlogPost,
+  deleteBlogPost
 };
 
 export default allControllers;

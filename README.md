@@ -105,6 +105,8 @@ GET https://blood-bound.vercel.app
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Get all services` | `https://blood-bound.vercel.app/getservices` | `GET`   | |
 | `Test booking` | `https://blood-bound.vercel.app/testbooking` | `POST`   | testName (string), userName (string), userEmail (string), date (string), time (string), phone (string), address (string), status (string), price (string), imageUrl (string), |
+| `Get all test bookings` | `https://blood-bound.vercel.app/gettestbookings` | `GET`   | |
+| `Change status of a test booking` | `https://blood-bound.vercel.app/statuschangefortestbooking/${id}` | `PATCH`   | id (string) |
 
 ### Blog post api route
 
@@ -113,3 +115,4 @@ GET https://blood-bound.vercel.app
 | `Create blog post` | `https://blood-bound.vercel.app/createblogpost` | `POST`   | title (string), description (string), photo (string) |
 | `Get all blog posts` | `https://blood-bound.vercel.app/getblogposts` | `GET`   | |
 | `Get specific blog post` | `https://blood-bound.vercel.app/getblogpost/${id}` | `GET`   | |
+| `Delete blog post` | `https://blood-bound.vercel.app/deleteblogpost/${id}` | `DELETE`   | |
