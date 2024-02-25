@@ -28,7 +28,9 @@ const {
   getBlogPost,
   getTestBookings,
   statusChangeForTestBooking,
-  deleteBlogPost
+  deleteBlogPost,
+  volunteerDelete,
+  getTestBookingOfSpecificUser
 } = allControllers;
 
 //all router operation
@@ -54,6 +56,7 @@ router.get("/getallcampaigns", getAllCampaigns);
 router.post("/getspecificcampaignandothers", getSpecificCampaignAndOthers);
 router.post("/calculatedonateamountanduser", calculateDonateAmountAndUser);
 router.post("/volunteercreate", volunteerCreate);
+router.delete("/volunteerdelete", volunteerDelete);
 router.delete("/campaigndelete/:id", campaignDelete);
 
 // payment
@@ -65,6 +68,7 @@ router.get("/getCommunityChat", getCommunityChat);
 // bio medical
 router.get("/getservices", getBioMedicalServices);
 router.post("/testbooking", testBooking);
+router.get("/gettestbookingsofspecificuser/:email", getTestBookingOfSpecificUser);
 router.get("/gettestbookings", getTestBookings);
 router.patch("/statuschangefortestbooking/:id", statusChangeForTestBooking);
 

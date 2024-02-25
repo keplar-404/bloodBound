@@ -18,6 +18,8 @@ import getBlogPost from "./getSpecificBlogPost";
 import getTestBookings from "./getTestBookingsController";
 import statusChangeForTestBooking from "./statusChangeForTestBooking";
 import deleteBlogPost from "./deleteBlogPostController";
+import volunteerDelete from "./volunteerDeleteController";
+import getTestBookingOfSpecificUser from "./getTestBookingOfSpecificUserController";
 
 import getBioMedicalServices from "./getBioMedicalServices";
 import getUser from "./getUserController";
@@ -42,6 +44,7 @@ const allControllers = {
   getSpecificCampaignAndOthers,
   calculateDonateAmountAndUser,
   volunteerCreate,
+  volunteerDelete,
   campaignDelete,
 
   // donor
@@ -55,6 +58,7 @@ const allControllers = {
   // bio madical
   getBioMedicalServices,
   testBooking,
+  getTestBookingOfSpecificUser,
   getTestBookings,
   statusChangeForTestBooking,
 
