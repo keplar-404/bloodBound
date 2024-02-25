@@ -20,6 +20,8 @@ import statusChangeForTestBooking from "./statusChangeForTestBooking";
 import deleteBlogPost from "./deleteBlogPostController";
 import volunteerDelete from "./volunteerDeleteController";
 import getTestBookingOfSpecificUser from "./getTestBookingOfSpecificUserController";
+import getBloodReqsOfUser from "./getSpecificUserBloodReq";
+import clcDonationAmountAndCampaingsLength from "./clcDonationAmountAndCampaingsLength";
 
 import getBioMedicalServices from "./getBioMedicalServices";
 import getUser from "./getUserController";
@@ -37,6 +39,7 @@ const allControllers = {
   // blood request
   createBloodRequest,
   getBloodRequests,
+  getBloodReqsOfUser,
 
   // campaign
   createCampaign,
@@ -46,6 +49,7 @@ const allControllers = {
   volunteerCreate,
   volunteerDelete,
   campaignDelete,
+  clcDonationAmountAndCampaingsLength,
 
   // donor
   createDonor,

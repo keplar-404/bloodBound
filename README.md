@@ -80,6 +80,7 @@ GET https://blood-bound.vercel.app
 | :--------------------- | :-------------------------------------------------- | :------- | :-------------- |
 | `Create blood request` | `https://blood-bound.vercel.app/createbloodrequest` | `POST`   | patientName (string), bloodGroup (string), time (date), location (string), phone (string), bloodBag (string), |
 | `Get blood request` | `https://blood-bound.vercel.app/getbloodrequests` | `GET`   | |
+| `Get blood requests of specific user` | `https://blood-bound.vercel.app/getspecificusersbloodreqs/${email}` | `GET`   | |
 
 ### Payment api route
 
@@ -92,6 +93,7 @@ GET https://blood-bound.vercel.app
 | **Opetation** | **Api**                                     | **Type** | **Data (type)**                               |
 | :------------ | :------------------------------------------ | :------- | :-------------------------------------------- |
 | `Get all campaigns` | `https://blood-bound.vercel.app/getallcampaigns` | `GET`   | |
+| `Get total donation amount and campaings length` | `https://blood-bound.vercel.app/clcDonationAmountAndCampaingsLength` | `GET`   | |
 | `Get specific campaign and others` | `https://blood-bound.vercel.app/getspecificcampaignandothers` | `POST` | campaginId (string) |
 | `create campaign` | `https://blood-bound.vercel.app/createcampaign` | `POST`   | title (string), description (string), photo (string), startDate (date), endDate (date), address (string), email(string) |
 | `Get specific campain donation amount and how many users donated` | `https://blood-bound.vercel.app/calculatedonateamountanduser` | `POST`   | campaginId (string) |

@@ -30,7 +30,9 @@ const {
   statusChangeForTestBooking,
   deleteBlogPost,
   volunteerDelete,
-  getTestBookingOfSpecificUser
+  getTestBookingOfSpecificUser,
+  getBloodReqsOfUser,
+  clcDonationAmountAndCampaingsLength
 } = allControllers;
 
 //all router operation
@@ -49,6 +51,7 @@ router.get("/getdonars", getDonors);
 // blood request
 router.post("/createbloodrequest", createBloodRequest);
 router.get("/getbloodrequests", getBloodRequests);
+router.get("/getspecificusersbloodreqs/:email", getBloodReqsOfUser);
 
 // campaign
 router.post("/createcampaign", createCampaign);
@@ -58,6 +61,7 @@ router.post("/calculatedonateamountanduser", calculateDonateAmountAndUser);
 router.post("/volunteercreate", volunteerCreate);
 router.delete("/volunteerdelete", volunteerDelete);
 router.delete("/campaigndelete/:id", campaignDelete);
+router.get("/clcDonationAmountAndCampaingsLength", clcDonationAmountAndCampaingsLength);
 
 // payment
 router.post("/stripe", stripePayment);
