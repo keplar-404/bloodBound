@@ -74,13 +74,14 @@ GET https://blood-bound.vercel.app
 | `Create donor`   | `https://blood-bound.vercel.app/donorcreate` | `POST`   | email (string), phone (string), bloodGroup (string), district (string), upazila (string), address (string), lastDonationDate (string) |
 | `Get all donors` | `https://blood-bound.vercel.app/getdonars`   | `GET`    |                                                                                                                                       |
 
-### Blood request api route
+### Blood request and donate api route
 
 | **Opetation**          | **Api**                                             | **Type** | **Data (type)** |
 | :--------------------- | :-------------------------------------------------- | :------- | :-------------- |
 | `Create blood request` | `https://blood-bound.vercel.app/createbloodrequest` | `POST`   | patientName (string), bloodGroup (string), time (date), location (string), phone (string), bloodBag (string), |
 | `Get blood request` | `https://blood-bound.vercel.app/getbloodrequests` | `GET`   | |
 | `Get blood requests of specific user` | `https://blood-bound.vercel.app/getspecificusersbloodreqs/${email}` | `GET`   | |
+| `Blood donate on blood request` | `https://blood-bound.vercel.app/donateonbloodreq` | `POST`   | email (string), bloodreqId (string), bloodBag (number), date (string) , |
 
 ### Payment api route
 
