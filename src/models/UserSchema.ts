@@ -44,6 +44,13 @@ const UserSchema = new mongoose.Schema({
       bloodBag: String,
     },
   ],
+  bloodReqDonation: [
+    {
+      bloodreqId: String,
+      date: String,
+      bloodBag: String,
+    },
+  ],
   campagins: [String],
   volunteer: [
     {

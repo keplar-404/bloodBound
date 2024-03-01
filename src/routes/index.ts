@@ -33,7 +33,8 @@ const {
   getTestBookingOfSpecificUser,
   getBloodReqsOfUser,
   clcDonationAmountAndCampaingsLength,
-  testBookingDelete
+  testBookingDelete,
+  bloodReqDonation
 } = allControllers;
 
 //all router operation
@@ -48,6 +49,7 @@ router.delete("/userdelete/:id", userDelete);
 // donor
 router.post("/donorcreate", createDonor);
 router.get("/getdonars", getDonors);
+router.post("/donateonbloodreq", bloodReqDonation);
 
 // blood request
 router.post("/createbloodrequest", createBloodRequest);

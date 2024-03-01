@@ -23,6 +23,7 @@ import getTestBookingOfSpecificUser from "./getTestBookingOfSpecificUserControll
 import getBloodReqsOfUser from "./getSpecificUserBloodReq";
 import clcDonationAmountAndCampaingsLength from "./clcDonationAmountAndCampaingsLength";
 import testBookingDelete from "./testBookingDeleteController";
+import bloodReqDonation from "./bloodReqDonation";
 
 import getBioMedicalServices from "./getBioMedicalServices";
 import getUser from "./getUserController";
@@ -55,6 +56,7 @@ const allControllers = {
   // donor
   createDonor,
   getDonors,
+  bloodReqDonation,
 
   // payment
   stripePayment,
