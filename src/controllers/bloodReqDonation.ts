@@ -7,13 +7,7 @@ export default async function bloodReqDonation(
   res: Response,
   next: NextFunction
 ) {
-  const {
-    email,
-    bloodreqId,
-    bloodBag,
-    date,
-   
-  } = req.body;
+  const { email, username, bloodreqId, bloodBag, date } = req.body;
 
   try {
     // Find the user document
@@ -65,6 +59,8 @@ export default async function bloodReqDonation(
             bloodreqId: bloodreqId,
             bloodBag: bloodBag,
             date: date,
+            donorName: email,
+            donorEmail: username,
           },
         },
         $set: {

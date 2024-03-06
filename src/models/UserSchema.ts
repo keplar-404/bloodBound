@@ -45,7 +45,8 @@ const UserSchema = new mongoose.Schema({
     },
   ],
   bloodReqDonation: [
-    {
+    { donorName: String,
+      donorEmail: String,
       bloodreqId: String,
       date: String,
       bloodBag: String,

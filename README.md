@@ -81,7 +81,7 @@ GET https://blood-bound.vercel.app
 | `Create blood request` | `https://blood-bound.vercel.app/createbloodrequest` | `POST`   | patientName (string), bloodGroup (string), time (date), location (string), phone (string), bloodBag (string), |
 | `Get blood request` | `https://blood-bound.vercel.app/getbloodrequests` | `GET`   | |
 | `Get blood requests of specific user` | `https://blood-bound.vercel.app/getspecificusersbloodreqs/${email}` | `GET`   | |
-| `Blood donate on blood request` | `https://blood-bound.vercel.app/donateonbloodreq` | `POST`   | email (string), bloodreqId (string), bloodBag (number), date (string) , |
+| `Blood donate on blood request` | `https://blood-bound.vercel.app/donateonbloodreq` | `POST`   | email (string), username (string) bloodreqId (string), bloodBag (number), date (string) , |
 
 ### Payment api route
 
