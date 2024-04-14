@@ -1,6 +1,8 @@
-# For contributers
+# Backend for BloodBound project
 
-Follow this steps to setup project on your pc.
+BloodBond is a web application dedicated to facilitating blood donation and supporting various campaigns related to healthcare. The platform provides a seamless experience for users to register as donors, donate blood, volunteer for offline campaigns, contribute financially to specific causes, and access biomedical services. This the bakend repository.
+
+Follow this steps to setup project on your machine.
 
 ## Installation
 
@@ -12,23 +14,14 @@ cd ./bloodBound
 npm i
 ```
 
-2. Pick the branch name
 
-- abusaleh
-- golam_raiyan
-- hasan_ali
-- main
-- shammo
-- shehub
-- shishir_ahmed
-
-3. Change the branch
+2. Change the branch 
 
 ```bashs
-git checkout branch_name_here
+git checkout -b branch_name_here
 ```
 
-4. start codding
+3. start codding
 
 ## Push code
 
