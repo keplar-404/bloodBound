@@ -2,6 +2,8 @@
 
 BloodBond is a web application dedicated to facilitating blood donation and supporting various campaigns related to healthcare. The platform provides a seamless experience for users to register as donors, donate blood, volunteer for offline campaigns, contribute financially to specific causes, and access biomedical services. This the bakend repository.
 
+## [Client side repo](https://github.com/Shammo06/Bloodbond-client)
+
 Follow this steps to setup project on your machine.
 
 ## Installation
